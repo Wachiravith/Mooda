@@ -1,0 +1,727 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!doctype html>\
+<html lang="en">\
+<head>\
+  <meta charset="UTF-8" />\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>\
+  <title>MOODA \'97 Upload Closet</title>\
+\
+  <link rel="preconnect" href="https://fonts.googleapis.com">\
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">\
+\
+  <style>\
+    :root\{\
+      --bg:#fff; --ink:#111; --muted:#6b6b6b; --line:#dadada; --soft:#f6f6f6;\
+      --radius:18px; --max:1120px;\
+    \}\
+    *\{box-sizing:border-box\}\
+    body\{\
+      margin:0; background:var(--bg); color:var(--ink);\
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;\
+      letter-spacing:.01em;\
+    \}\
+    a\{color:inherit; text-decoration:none\}\
+    .container\{max-width:var(--max); margin:0 auto; padding:0 22px\}\
+\
+    header\{\
+      position:sticky; top:0; z-index:50;\
+      background:rgba(255,255,255,.86); backdrop-filter:blur(10px);\
+      border-bottom:1px solid rgba(218,218,218,.6);\
+    \}\
+    .nav\{\
+      display:flex; align-items:center; justify-content:space-between;\
+      padding:16px 0; gap:16px;\
+    \}\
+    .brand\{\
+      font-family:"Playfair Display",serif; font-weight:500;\
+      letter-spacing:.12em; font-size:18px;\
+    \}\
+    .navlinks\{display:flex; gap:18px; color:var(--muted); font-size:14px; align-items:center\}\
+    .navlinks a\{\
+      padding:8px 10px; border-radius:999px; transition:background .15s ease, color .15s ease;\
+    \}\
+    .navlinks a:hover\{background:var(--soft); color:var(--ink)\}\
+    .cta\{\
+      display:inline-flex; align-items:center; gap:10px;\
+      padding:10px 14px; border-radius:999px; border:1px solid var(--ink);\
+      background:var(--ink); color:#fff; font-size:14px;\
+      transition:transform .12s ease, opacity .12s ease;\
+      white-space:nowrap;\
+    \}\
+    .cta:hover\{transform:translateY(-1px); opacity:.92\}\
+\
+    main\{padding:34px 0 70px\}\
+    .page-title\{\
+      display:flex; justify-content:space-between; align-items:baseline; gap:16px;\
+      padding:18px 0 22px; border-bottom:1px solid var(--line);\
+    \}\
+    h1\{\
+      margin:0;\
+      font-family:"Playfair Display",serif;\
+      font-weight:500; letter-spacing:.04em;\
+      font-size:28px;\
+    \}\
+    .sub\{\
+      margin:6px 0 0; color:var(--muted); font-size:14px; line-height:1.6; max-width:68ch;\
+    \}\
+\
+    .grid\{\
+      display:grid; grid-template-columns: 1.05fr 0.95fr; gap:18px;\
+      margin-top:22px;\
+    \}\
+    @media (max-width: 980px)\{ .grid\{grid-template-columns:1fr;\} \}\
+\
+    .card\{\
+      border:1px solid var(--line);\
+      border-radius:var(--radius);\
+      background:#fff;\
+      overflow:hidden;\
+    \}\
+    .card-head\{\
+      padding:16px 18px;\
+      border-bottom:1px solid var(--line);\
+      display:flex; justify-content:space-between; align-items:center; gap:12px;\
+    \}\
+    .card-head strong\{\
+      font-size:13px; letter-spacing:.08em; text-transform:uppercase;\
+    \}\
+    .card-head span\{color:var(--muted); font-size:13px\}\
+\
+    /* Dropzone */\
+    .dropzone\{\
+      padding:18px;\
+    \}\
+    .dz\{\
+      border:1px dashed rgba(17,17,17,.35);\
+      border-radius:16px;\
+      background:var(--soft);\
+      min-height:220px;\
+      display:flex; flex-direction:column; justify-content:center; align-items:center;\
+      gap:10px;\
+      text-align:center;\
+      transition: border-color .14s ease, transform .14s ease, background .14s ease;\
+      position:relative;\
+      padding:22px;\
+    \}\
+    .dz.dragover\{\
+      border-color: var(--ink);\
+      background:#fff;\
+      transform: translateY(-1px);\
+    \}\
+    .dz h2\{\
+      margin:0;\
+      font-size:16px;\
+      font-weight:600;\
+    \}\
+    .dz p\{\
+      margin:0;\
+      color:var(--muted);\
+      font-size:14px;\
+      line-height:1.6;\
+      max-width:56ch;\
+    \}\
+    .dz .row\{\
+      display:flex; gap:12px; flex-wrap:wrap; justify-content:center;\
+      margin-top:6px;\
+    \}\
+    .btn\{\
+      border:1px solid var(--line);\
+      background:#fff; color:var(--ink);\
+      border-radius:999px;\
+      padding:10px 14px;\
+      font-size:14px;\
+      cursor:pointer;\
+      transition:background .14s ease, transform .14s ease;\
+    \}\
+    .btn:hover\{background:var(--soft); transform:translateY(-1px)\}\
+    .btn-primary\{\
+      background:var(--ink); color:#fff; border-color:var(--ink);\
+    \}\
+    .btn-primary:hover\{opacity:.92; background:var(--ink)\}\
+    input[type="file"]\{display:none\}\
+\
+    /* List */\
+    .items\{\
+      padding:18px;\
+      display:grid;\
+      grid-template-columns: repeat(2, 1fr);\
+      gap:14px;\
+    \}\
+    @media (max-width: 520px)\{ .items\{grid-template-columns:1fr;\} \}\
+\
+    .item\{\
+      border:1px solid var(--line);\
+      border-radius:16px;\
+      overflow:hidden;\
+      background:#fff;\
+      display:flex;\
+      flex-direction:column;\
+      min-height: 210px;\
+    \}\
+    .thumb\{\
+      width:100%; height:140px; background:var(--soft);\
+      display:flex; align-items:center; justify-content:center;\
+      overflow:hidden;\
+      border-bottom:1px solid var(--line);\
+    \}\
+    .thumb img\{\
+      width:100%; height:100%;\
+      object-fit:cover;\
+      filter: grayscale(1) contrast(1.05);\
+    \}\
+    .meta\{\
+      padding:12px 12px 10px;\
+      display:flex; flex-direction:column; gap:8px;\
+    \}\
+    .filename\{\
+      font-size:13px; color:var(--ink);\
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;\
+    \}\
+    .tags\{\
+      display:flex; flex-wrap:wrap; gap:8px;\
+    \}\
+    .tag\{\
+      font-size:12px;\
+      border:1px solid var(--line);\
+      border-radius:999px;\
+      padding:6px 10px;\
+      color:var(--ink);\
+      background:#fff;\
+    \}\
+    .item-actions\{\
+      margin-top:auto;\
+      padding:10px 12px 12px;\
+      display:flex; gap:10px; flex-wrap:wrap;\
+      border-top:1px solid var(--line);\
+    \}\
+    .mini\{\
+      padding:8px 10px;\
+      font-size:13px;\
+    \}\
+    .danger\{\
+      border-color: rgba(17,17,17,.2);\
+      color: rgba(17,17,17,.85);\
+    \}\
+\
+    /* Tagging panel */\
+    .panel\{\
+      padding:18px;\
+    \}\
+    .panel .hint\{\
+      color:var(--muted);\
+      font-size:13px;\
+      line-height:1.65;\
+      margin-top:6px;\
+    \}\
+    .form\{\
+      display:grid;\
+      grid-template-columns: 1fr;\
+      gap:12px;\
+      margin-top:14px;\
+    \}\
+    label\{\
+      font-size:12px;\
+      color:var(--muted);\
+      letter-spacing:.08em;\
+      text-transform:uppercase;\
+      display:block;\
+      margin-bottom:6px;\
+    \}\
+    select, input[type="text"]\{\
+      width:100%;\
+      border:1px solid var(--line);\
+      border-radius:14px;\
+      padding:12px 12px;\
+      font-size:14px;\
+      outline:none;\
+      background:#fff;\
+    \}\
+    select:focus, input[type="text"]:focus\{border-color: rgba(17,17,17,.55)\}\
+    .split\{\
+      display:grid;\
+      grid-template-columns: 1fr 1fr;\
+      gap:12px;\
+    \}\
+    @media (max-width: 520px)\{ .split\{grid-template-columns:1fr;\} \}\
+\
+    .panel-actions\{\
+      display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;\
+    \}\
+\
+    /* Footer row */\
+    .bottom-row\{\
+      margin-top:18px;\
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;\
+      color:var(--muted); font-size:13px;\
+    \}\
+    .link\{\
+      color:var(--muted);\
+      border-bottom:1px solid rgba(107,107,107,.4);\
+      padding-bottom:2px;\
+    \}\
+    .link:hover\{color:var(--ink); border-bottom-color: rgba(17,17,17,.45)\}\
+  </style>\
+</head>\
+\
+<body>\
+\
+<header>\
+  <div class="container">\
+    <div class="nav">\
+      <a class="brand" href="index.html" aria-label="MOODA home">MOODA</a>\
+      <nav class="navlinks" aria-label="Primary navigation">\
+        <a href="upload.html" style="color:var(--ink);">Upload</a>\
+        <a href="index.html#demo">Looks</a>\
+        <a href="index.html#about">About</a>\
+        <a href="#signin">Sign in</a>\
+      </nav>\
+      <a class="cta" href="index.html#demo">Start</a>\
+    </div>\
+  </div>\
+</header>\
+\
+<main>\
+  <div class="container">\
+    <div class="page-title">\
+      <div>\
+        <h1>Upload Closet</h1>\
+        <p class="sub">Drag & drop your clothing photos. Add quick tags. MOODA saves them locally (mock) so you can preview daily matching.</p>\
+      </div>\
+      <div style="text-align:right">\
+        <div style="font-size:12px; color:var(--muted); letter-spacing:.08em; text-transform:uppercase;">Closet items</div>\
+        <div style="font-size:22px; font-weight:600; margin-top:4px;" id="count">0</div>\
+      </div>\
+    </div>\
+\
+    <div class="grid">\
+      <!-- Left: Drop + Items -->\
+      <section class="card" aria-label="Upload area">\
+        <div class="card-head">\
+          <strong>Upload</strong>\
+          <span>jpg / png \'95 local mock</span>\
+        </div>\
+\
+        <div class="dropzone">\
+          <div class="dz" id="dz" role="button" tabindex="0" aria-label="Drop files here or browse">\
+            <h2>Drop photos here</h2>\
+            <p>Or browse to upload. Add tags on the right. You can edit tags anytime.</p>\
+            <div class="row">\
+              <button class="btn btn-primary" id="browseBtn" type="button">Browse files</button>\
+              <button class="btn" id="clearBtn" type="button">Clear all</button>\
+            </div>\
+            <input id="fileInput" type="file" accept="image/*" multiple />\
+          </div>\
+        </div>\
+\
+        <div class="card-head" style="border-top:1px solid var(--line); border-bottom:0;">\
+          <strong>Your items</strong>\
+          <span id="selectedHint">Select an item to tag</span>\
+        </div>\
+\
+        <div class="items" id="items"></div>\
+\
+        <div class="bottom-row" style="padding:0 18px 18px;">\
+          <div>Tip: Use clear photos (front view). MOODA is monochrome by design.</div>\
+          <a class="link" href="index.html">Back to Landing</a>\
+        </div>\
+      </section>\
+\
+      <!-- Right: Tagging panel -->\
+      <aside class="card" aria-label="Tagging panel">\
+        <div class="card-head">\
+          <strong>Tagging</strong>\
+          <span>mock inputs</span>\
+        </div>\
+\
+        <div class="panel">\
+          <div style="font-size:16px; font-weight:600;">Item details</div>\
+          <div class="hint">Select an item from the left. Set tags, then save.</div>\
+\
+          <div class="form">\
+            <div>\
+              <label>Selected item</label>\
+              <input type="text" id="selectedName" placeholder="No item selected" disabled />\
+            </div>\
+\
+            <div class="split">\
+              <div>\
+                <label>Category</label>\
+                <select id="category">\
+                  <option value="">\'97</option>\
+                  <option>Top</option>\
+                  <option>Bottom</option>\
+                  <option>Outerwear</option>\
+                  <option>Shoes</option>\
+                  <option>Accessory</option>\
+                </select>\
+              </div>\
+              <div>\
+                <label>Formality</label>\
+                <select id="formality">\
+                  <option value="">\'97</option>\
+                  <option>Relaxed</option>\
+                  <option>Casual</option>\
+                  <option>Smart</option>\
+                  <option>Formal</option>\
+                </select>\
+              </div>\
+            </div>\
+\
+            <div class="split">\
+              <div>\
+                <label>Color</label>\
+                <select id="color">\
+                  <option value="">\'97</option>\
+                  <option>Black</option>\
+                  <option>White</option>\
+                  <option>Grey</option>\
+                  <option>Monochrome</option>\
+                </select>\
+              </div>\
+              <div>\
+                <label>Season</label>\
+                <select id="season">\
+                  <option value="">\'97</option>\
+                  <option>All-season</option>\
+                  <option>Warm</option>\
+                  <option>Cool</option>\
+                </select>\
+              </div>\
+            </div>\
+\
+            <div>\
+              <label>Notes (optional)</label>\
+              <input type="text" id="notes" placeholder="e.g., fits oversized, good for work" />\
+            </div>\
+\
+            <div class="panel-actions">\
+              <button class="btn btn-primary" id="saveTagsBtn" type="button">Save tags</button>\
+              <button class="btn" id="autoTagBtn" type="button">Auto-tag (mock)</button>\
+            </div>\
+\
+            <div class="hint" id="status" aria-live="polite"></div>\
+          </div>\
+        </div>\
+      </aside>\
+    </div>\
+  </div>\
+</main>\
+\
+<script>\
+  // ---- Storage ----\
+  const STORAGE_KEY = "mooda_closet_v1";\
+\
+  /** Item shape:\
+   * \{ id, name, dataUrl, tags: \{category,color,formality,season,notes\} \}\
+   */\
+\
+  const dz = document.getElementById("dz");\
+  const fileInput = document.getElementById("fileInput");\
+  const browseBtn = document.getElementById("browseBtn");\
+  const clearBtn = document.getElementById("clearBtn");\
+  const itemsEl = document.getElementById("items");\
+  const countEl = document.getElementById("count");\
+  const selectedHint = document.getElementById("selectedHint");\
+\
+  const selectedName = document.getElementById("selectedName");\
+  const category = document.getElementById("category");\
+  const formality = document.getElementById("formality");\
+  const color = document.getElementById("color");\
+  const season = document.getElementById("season");\
+  const notes = document.getElementById("notes");\
+  const saveTagsBtn = document.getElementById("saveTagsBtn");\
+  const autoTagBtn = document.getElementById("autoTagBtn");\
+  const status = document.getElementById("status");\
+\
+  let closet = loadCloset();\
+  let selectedId = null;\
+\
+  function uid()\{\
+    return Math.random().toString(16).slice(2) + Date.now().toString(16);\
+  \}\
+\
+  function loadCloset()\{\
+    try\{\
+      const raw = localStorage.getItem(STORAGE_KEY);\
+      return raw ? JSON.parse(raw) : [];\
+    \}catch(e)\{\
+      return [];\
+    \}\
+  \}\
+\
+  function saveCloset()\{\
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(closet));\
+    countEl.textContent = String(closet.length);\
+  \}\
+\
+  function setStatus(msg)\{\
+    status.textContent = msg;\
+    if(msg)\{\
+      setTimeout(() => \{ if(status.textContent === msg) status.textContent = ""; \}, 2500);\
+    \}\
+  \}\
+\
+  function render()\{\
+    countEl.textContent = String(closet.length);\
+    itemsEl.innerHTML = "";\
+\
+    if(closet.length === 0)\{\
+      itemsEl.innerHTML = `\
+        <div style="grid-column:1/-1; color:var(--muted); font-size:14px; line-height:1.7; border:1px dashed var(--line); border-radius:16px; padding:14px; background:#fff;">\
+          No items yet. Upload a few clothing photos to start.\
+        </div>\
+      `;\
+      return;\
+    \}\
+\
+    closet.forEach(item => \{\
+      const t = item.tags || \{\};\
+      const tags = [\
+        t.category, t.color, t.formality, t.season\
+      ].filter(Boolean).slice(0,4);\
+\
+      const tagHtml = tags.map(x => `<span class="tag">$\{escapeHtml(x)\}</span>`).join("");\
+\
+      const isSelected = item.id === selectedId;\
+      const border = isSelected ? "border-color:#111; box-shadow:0 10px 28px rgba(0,0,0,.08);" : "";\
+\
+      const div = document.createElement("div");\
+      div.className = "item";\
+      div.setAttribute("data-id", item.id);\
+      div.style = border;\
+\
+      div.innerHTML = `\
+        <div class="thumb">\
+          <img alt="$\{escapeHtml(item.name)\}" src="$\{item.dataUrl\}">\
+        </div>\
+        <div class="meta">\
+          <div class="filename" title="$\{escapeHtml(item.name)\}">$\{escapeHtml(item.name)\}</div>\
+          <div class="tags">$\{tagHtml || `<span class="tag">No tags</span>`\}</div>\
+        </div>\
+        <div class="item-actions">\
+          <button class="btn mini" data-action="select">Select</button>\
+          <button class="btn mini danger" data-action="delete">Remove</button>\
+        </div>\
+      `;\
+\
+      div.addEventListener("click", (e) => \{\
+        const action = e.target?.getAttribute?.("data-action");\
+        if(action === "delete")\{\
+          removeItem(item.id);\
+          return;\
+        \}\
+        if(action === "select" || !action)\{\
+          selectItem(item.id);\
+        \}\
+      \});\
+\
+      itemsEl.appendChild(div);\
+    \});\
+  \}\
+\
+  function escapeHtml(str)\{\
+    return String(str).replace(/[&<>"']/g, s => (\{\
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"\
+    \}[s]));\
+  \}\
+\
+  function selectItem(id)\{\
+    selectedId = id;\
+    const item = closet.find(x => x.id === id);\
+    if(!item) return;\
+\
+    selectedHint.textContent = "Editing tags";\
+    selectedName.value = item.name;\
+\
+    const t = item.tags || \{\};\
+    category.value = t.category || "";\
+    color.value = t.color || "";\
+    formality.value = t.formality || "";\
+    season.value = t.season || "";\
+    notes.value = t.notes || "";\
+\
+    render();\
+  \}\
+\
+  function removeItem(id)\{\
+    const idx = closet.findIndex(x => x.id === id);\
+    if(idx >= 0)\{\
+      const wasSelected = (selectedId === id);\
+      closet.splice(idx, 1);\
+      saveCloset();\
+      if(wasSelected)\{\
+        selectedId = null;\
+        selectedHint.textContent = "Select an item to tag";\
+        selectedName.value = "";\
+        category.value = "";\
+        color.value = "";\
+        formality.value = "";\
+        season.value = "";\
+        notes.value = "";\
+      \}\
+      render();\
+      setStatus("Item removed.");\
+    \}\
+  \}\
+\
+  async function handleFiles(fileList)\{\
+    const files = Array.from(fileList || []).filter(f => f.type.startsWith("image/"));\
+    if(files.length === 0)\{\
+      setStatus("Please upload image files (jpg/png).");\
+      return;\
+    \}\
+\
+    // Read files into data URLs (simple mock storage)\
+    for(const file of files)\{\
+      const dataUrl = await readAsDataUrl(file);\
+      closet.unshift(\{\
+        id: uid(),\
+        name: file.name,\
+        dataUrl,\
+        tags: \{ category:"", color:"", formality:"", season:"", notes:"" \}\
+      \});\
+    \}\
+\
+    saveCloset();\
+    render();\
+    setStatus(`$\{files.length\} item(s) added.`);\
+  \}\
+\
+  function readAsDataUrl(file)\{\
+    return new Promise((resolve, reject) => \{\
+      const reader = new FileReader();\
+      reader.onload = () => resolve(reader.result);\
+      reader.onerror = reject;\
+      reader.readAsDataURL(file);\
+    \});\
+  \}\
+\
+  // ---- Drag & Drop ----\
+  dz.addEventListener("dragover", (e) => \{\
+    e.preventDefault();\
+    dz.classList.add("dragover");\
+  \});\
+  dz.addEventListener("dragleave", () => dz.classList.remove("dragover"));\
+  dz.addEventListener("drop", async (e) => \{\
+    e.preventDefault();\
+    dz.classList.remove("dragover");\
+    await handleFiles(e.dataTransfer.files);\
+  \});\
+\
+  // Click zone to browse\
+  dz.addEventListener("click", () => fileInput.click());\
+  dz.addEventListener("keydown", (e) => \{\
+    if(e.key === "Enter" || e.key === " ")\{\
+      e.preventDefault();\
+      fileInput.click();\
+    \}\
+  \});\
+\
+  browseBtn.addEventListener("click", (e) => \{\
+    e.stopPropagation();\
+    fileInput.click();\
+  \});\
+\
+  fileInput.addEventListener("change", async () => \{\
+    await handleFiles(fileInput.files);\
+    fileInput.value = "";\
+  \});\
+\
+  clearBtn.addEventListener("click", (e) => \{\
+    e.stopPropagation();\
+    closet = [];\
+    selectedId = null;\
+    localStorage.removeItem(STORAGE_KEY);\
+    selectedHint.textContent = "Select an item to tag";\
+    selectedName.value = "";\
+    category.value = "";\
+    color.value = "";\
+    formality.value = "";\
+    season.value = "";\
+    notes.value = "";\
+    render();\
+    countEl.textContent = "0";\
+    setStatus("Closet cleared.");\
+  \});\
+\
+  // ---- Tagging ----\
+  saveTagsBtn.addEventListener("click", () => \{\
+    if(!selectedId)\{\
+      setStatus("Select an item first.");\
+      return;\
+    \}\
+    const item = closet.find(x => x.id === selectedId);\
+    if(!item) return;\
+\
+    item.tags = \{\
+      category: category.value,\
+      color: color.value,\
+      formality: formality.value,\
+      season: season.value,\
+      notes: notes.value.trim()\
+    \};\
+\
+    saveCloset();\
+    render();\
+    setStatus("Tags saved.");\
+  \});\
+\
+  autoTagBtn.addEventListener("click", () => \{\
+    if(!selectedId)\{\
+      setStatus("Select an item first.");\
+      return;\
+    \}\
+    // Mock rules (simple + deterministic)\
+    const item = closet.find(x => x.id === selectedId);\
+    if(!item) return;\
+\
+    const name = (item.name || "").toLowerCase();\
+    let cat = "Top";\
+    if(name.includes("shoe") || name.includes("sneaker") || name.includes("loafer")) cat = "Shoes";\
+    else if(name.includes("coat") || name.includes("jacket") || name.includes("blazer")) cat = "Outerwear";\
+    else if(name.includes("pants") || name.includes("trouser") || name.includes("jeans") || name.includes("skirt")) cat = "Bottom";\
+    else if(name.includes("bag") || name.includes("watch") || name.includes("belt")) cat = "Accessory";\
+\
+    // monochrome bias\
+    const c = ["Black","White","Grey","Monochrome"];\
+    const pick = c[(item.id.charCodeAt(0) + item.id.charCodeAt(item.id.length-1)) % c.length];\
+\
+    // formality bias\
+    let f = "Casual";\
+    if(cat === "Outerwear") f = "Smart";\
+    if(name.includes("blazer") || name.includes("coat")) f = "Formal";\
+\
+    item.tags = \{\
+      category: cat,\
+      color: pick,\
+      formality: f,\
+      season: "All-season",\
+      notes: (item.tags?.notes || "").trim()\
+    \};\
+\
+    // reflect to UI\
+    category.value = item.tags.category;\
+    color.value = item.tags.color;\
+    formality.value = item.tags.formality;\
+    season.value = item.tags.season;\
+\
+    saveCloset();\
+    render();\
+    setStatus("Auto-tagged (mock).");\
+  \});\
+\
+  // ---- Init ----\
+  saveCloset();\
+  render();\
+</script>\
+\
+</body>\
+</html>\
+}
