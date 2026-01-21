@@ -1,0 +1,779 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!doctype html>\
+<html lang="en">\
+<head>\
+  <meta charset="UTF-8" />\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>\
+  <title>MOODA \'97 Dress by how you feel</title>\
+\
+  <link rel="preconnect" href="https://fonts.googleapis.com">\
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">\
+\
+  <style>\
+    :root\{\
+      --bg: #ffffff;\
+      --ink: #111111;\
+      --muted: #6b6b6b;\
+      --line: #dadada;\
+      --soft: #f6f6f6;\
+      --radius: 18px;\
+      --max: 1120px;\
+    \}\
+    *\{ box-sizing: border-box; \}\
+    html, body\{ height: 100%; \}\
+    body\{\
+      margin: 0;\
+      background: var(--bg);\
+      color: var(--ink);\
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";\
+      line-height: 1.35;\
+      letter-spacing: 0.01em;\
+    \}\
+    a\{ color: inherit; text-decoration: none; \}\
+    button\{ font-family: inherit; \}\
+    .container\{ max-width: var(--max); margin: 0 auto; padding: 0 22px; \}\
+\
+    /* Header */\
+    header\{\
+      position: sticky;\
+      top: 0;\
+      z-index: 50;\
+      background: rgba(255,255,255,0.86);\
+      backdrop-filter: blur(10px);\
+      border-bottom: 1px solid rgba(218,218,218,0.6);\
+    \}\
+    .nav\{\
+      display: flex;\
+      align-items: center;\
+      justify-content: space-between;\
+      padding: 16px 0;\
+      gap: 16px;\
+    \}\
+    .brand\{\
+      font-family: "Playfair Display", serif;\
+      font-weight: 500;\
+      letter-spacing: 0.12em;\
+      font-size: 18px;\
+    \}\
+    .navlinks\{\
+      display: flex;\
+      align-items: center;\
+      gap: 18px;\
+      color: var(--muted);\
+      font-size: 14px;\
+    \}\
+    .navlinks a\{\
+      padding: 8px 10px;\
+      border-radius: 999px;\
+      transition: background .15s ease, color .15s ease;\
+    \}\
+    .navlinks a:hover\{\
+      background: var(--soft);\
+      color: var(--ink);\
+    \}\
+    .cta\{\
+      display: inline-flex;\
+      align-items: center;\
+      gap: 10px;\
+      padding: 10px 14px;\
+      border-radius: 999px;\
+      border: 1px solid var(--ink);\
+      background: var(--ink);\
+      color: #fff;\
+      font-size: 14px;\
+      transition: transform .12s ease, opacity .12s ease;\
+      white-space: nowrap;\
+    \}\
+    .cta:hover\{ transform: translateY(-1px); opacity: .92; \}\
+\
+    /* Hero */\
+    .hero\{\
+      position: relative;\
+      min-height: 78vh;\
+      display: flex;\
+      align-items: center;\
+      border-bottom: 1px solid var(--line);\
+      overflow: hidden;\
+    \}\
+    /* Replace the image URL if you want your own hero image */\
+    .hero::before\{\
+      content:"";\
+      position:absolute; inset:0;\
+      background:\
+        linear-gradient(rgba(17,17,17,0.30), rgba(17,17,17,0.30)),\
+        url("https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1920&q=80");\
+      background-size: cover;\
+      background-position: center;\
+      filter: grayscale(1) contrast(1.05);\
+      transform: scale(1.02);\
+    \}\
+    .hero-inner\{\
+      position: relative;\
+      width: 100%;\
+      padding: 64px 0;\
+      display: grid;\
+      grid-template-columns: 1.3fr 0.7fr;\
+      gap: 34px;\
+      align-items: end;\
+    \}\
+    @media (max-width: 900px)\{\
+      .hero-inner\{ grid-template-columns: 1fr; align-items: start; \}\
+    \}\
+    .hero h1\{\
+      margin: 0 0 10px 0;\
+      font-family: "Playfair Display", serif;\
+      font-weight: 500;\
+      font-size: clamp(46px, 6vw, 72px);\
+      letter-spacing: 0.08em;\
+      color: #fff;\
+    \}\
+    .hero h2\{\
+      margin: 0 0 14px 0;\
+      font-weight: 400;\
+      font-size: clamp(18px, 2.2vw, 22px);\
+      color: rgba(255,255,255,0.92);\
+      letter-spacing: 0.02em;\
+    \}\
+    .hero p\{\
+      margin: 0 0 22px 0;\
+      color: rgba(255,255,255,0.80);\
+      max-width: 58ch;\
+      font-size: 15px;\
+    \}\
+    .hero-actions\{\
+      display: flex;\
+      align-items: center;\
+      gap: 14px;\
+      flex-wrap: wrap;\
+    \}\
+    .cta-ghost\{\
+      padding: 10px 2px;\
+      color: rgba(255,255,255,0.88);\
+      border-bottom: 1px solid rgba(255,255,255,0.55);\
+      font-size: 14px;\
+      transition: opacity .12s ease;\
+    \}\
+    .cta-ghost:hover\{ opacity: .85; \}\
+\
+    .hero-card\{\
+      background: rgba(255,255,255,0.92);\
+      border: 1px solid rgba(218,218,218,0.8);\
+      border-radius: var(--radius);\
+      padding: 18px 18px 16px 18px;\
+      box-shadow: 0 14px 40px rgba(0,0,0,0.10);\
+    \}\
+    .hero-card .small\{\
+      font-size: 12px;\
+      color: var(--muted);\
+      letter-spacing: 0.06em;\
+      text-transform: uppercase;\
+      margin-bottom: 12px;\
+    \}\
+    .hero-card .row\{\
+      display:flex;\
+      justify-content: space-between;\
+      padding: 10px 0;\
+      border-top: 1px solid var(--line);\
+      font-size: 14px;\
+    \}\
+    .hero-card .row:first-of-type\{ border-top: 0; \}\
+    .pill\{\
+      display:inline-flex;\
+      align-items:center;\
+      padding: 7px 10px;\
+      border-radius: 999px;\
+      background: #fff;\
+      border: 1px solid var(--line);\
+      font-size: 13px;\
+      color: var(--ink);\
+    \}\
+\
+    /* Sections */\
+    section\{ padding: 70px 0; \}\
+    .section-title\{\
+      display:flex;\
+      justify-content: space-between;\
+      align-items: baseline;\
+      gap: 18px;\
+      margin-bottom: 26px;\
+    \}\
+    .section-title h3\{\
+      margin: 0;\
+      font-family: "Playfair Display", serif;\
+      font-weight: 500;\
+      letter-spacing: 0.04em;\
+      font-size: 26px;\
+    \}\
+    .section-title p\{\
+      margin: 0;\
+      color: var(--muted);\
+      max-width: 58ch;\
+      font-size: 14px;\
+    \}\
+\
+    /* How it works */\
+    .grid-3\{\
+      display:grid;\
+      grid-template-columns: repeat(3, 1fr);\
+      gap: 18px;\
+    \}\
+    @media (max-width: 900px)\{\
+      .grid-3\{ grid-template-columns: 1fr; \}\
+    \}\
+    .card\{\
+      border: 1px solid var(--line);\
+      border-radius: var(--radius);\
+      padding: 18px;\
+      background: #fff;\
+    \}\
+    .card .kicker\{\
+      font-size: 12px;\
+      color: var(--muted);\
+      letter-spacing: 0.08em;\
+      text-transform: uppercase;\
+      margin-bottom: 10px;\
+    \}\
+    .card h4\{\
+      margin: 0 0 8px 0;\
+      font-size: 16px;\
+      font-weight: 600;\
+      letter-spacing: 0.01em;\
+    \}\
+    .card p\{\
+      margin: 0;\
+      color: var(--muted);\
+      font-size: 14px;\
+      line-height: 1.55;\
+    \}\
+\
+    /* Demo */\
+    .demo\{\
+      display:grid;\
+      grid-template-columns: 0.95fr 1.05fr;\
+      gap: 18px;\
+      align-items: stretch;\
+    \}\
+    @media (max-width: 900px)\{\
+      .demo\{ grid-template-columns: 1fr; \}\
+    \}\
+    .demo-left\{\
+      border: 1px solid var(--line);\
+      border-radius: var(--radius);\
+      padding: 18px;\
+      background: #fff;\
+    \}\
+    .chips\{\
+      display:flex;\
+      flex-wrap: wrap;\
+      gap: 10px;\
+      margin-top: 12px;\
+    \}\
+    .chip\{\
+      border: 1px solid var(--line);\
+      background: #fff;\
+      color: var(--ink);\
+      border-radius: 999px;\
+      padding: 10px 12px;\
+      font-size: 14px;\
+      cursor: pointer;\
+      transition: background .14s ease, transform .14s ease, border-color .14s ease;\
+    \}\
+    .chip:hover\{ background: var(--soft); transform: translateY(-1px); \}\
+    .chip[aria-pressed="true"]\{\
+      background: var(--ink);\
+      color: #fff;\
+      border-color: var(--ink);\
+    \}\
+\
+    .demo-right\{\
+      border: 1px solid var(--line);\
+      border-radius: var(--radius);\
+      background: #fff;\
+      overflow: hidden;\
+      display:flex;\
+      flex-direction: column;\
+    \}\
+    .preview-top\{\
+      padding: 18px;\
+      border-bottom: 1px solid var(--line);\
+      display:flex;\
+      align-items: center;\
+      justify-content: space-between;\
+      gap: 12px;\
+    \}\
+    .look-title\{\
+      display:flex;\
+      flex-direction: column;\
+      gap: 4px;\
+    \}\
+    .look-title strong\{\
+      font-size: 14px;\
+      letter-spacing: 0.06em;\
+      text-transform: uppercase;\
+    \}\
+    .look-title span\{\
+      font-size: 13px;\
+      color: var(--muted);\
+    \}\
+    .preview-body\{\
+      padding: 18px;\
+      display:grid;\
+      grid-template-columns: 1fr 1fr;\
+      gap: 14px;\
+    \}\
+    @media (max-width: 520px)\{\
+      .preview-body\{ grid-template-columns: 1fr; \}\
+    \}\
+\
+    .outfit-box\{\
+      border: 1px solid var(--line);\
+      border-radius: 14px;\
+      padding: 14px;\
+      background: var(--soft);\
+      min-height: 180px;\
+      display:flex;\
+      flex-direction: column;\
+      justify-content: space-between;\
+      gap: 10px;\
+    \}\
+    .outfit-box .label\{\
+      font-size: 12px;\
+      color: var(--muted);\
+      letter-spacing: 0.08em;\
+      text-transform: uppercase;\
+    \}\
+    .outfit-box ul\{\
+      margin: 0;\
+      padding-left: 16px;\
+      color: var(--ink);\
+      font-size: 14px;\
+      line-height: 1.6;\
+    \}\
+    .outfit-box .note\{\
+      font-size: 13px;\
+      color: var(--muted);\
+      border-top: 1px solid rgba(218,218,218,0.8);\
+      padding-top: 10px;\
+    \}\
+\
+    .preview-actions\{\
+      padding: 16px 18px;\
+      border-top: 1px solid var(--line);\
+      display:flex;\
+      gap: 12px;\
+      flex-wrap: wrap;\
+    \}\
+    .btn\{\
+      border: 1px solid var(--line);\
+      background: #fff;\
+      color: var(--ink);\
+      border-radius: 999px;\
+      padding: 10px 14px;\
+      font-size: 14px;\
+      cursor: pointer;\
+      transition: background .14s ease, transform .14s ease;\
+      display:inline-flex;\
+      align-items:center;\
+      justify-content:center;\
+    \}\
+    .btn:hover\{ background: var(--soft); transform: translateY(-1px); \}\
+    .btn-primary\{\
+      background: var(--ink);\
+      color: #fff;\
+      border-color: var(--ink);\
+    \}\
+    .btn-primary:hover\{ opacity: .92; background: var(--ink); \}\
+\
+    /* Proof + Final CTA */\
+    .proof\{\
+      display:grid;\
+      grid-template-columns: 1fr 1fr;\
+      gap: 18px;\
+      align-items: start;\
+    \}\
+    @media (max-width: 900px)\{\
+      .proof\{ grid-template-columns: 1fr; \}\
+    \}\
+    .bullets\{\
+      border: 1px solid var(--line);\
+      border-radius: var(--radius);\
+      padding: 18px;\
+      background: #fff;\
+    \}\
+    .bullets ul\{\
+      margin: 0;\
+      padding-left: 18px;\
+      color: var(--ink);\
+      line-height: 1.7;\
+      font-size: 14px;\
+    \}\
+    .quote\{\
+      border: 1px solid var(--line);\
+      border-radius: var(--radius);\
+      padding: 18px;\
+      background: #fff;\
+      color: var(--muted);\
+      font-size: 14px;\
+      line-height: 1.7;\
+    \}\
+    .quote strong\{ color: var(--ink); font-weight: 600; \}\
+\
+    .final-cta\{\
+      border-top: 1px solid var(--line);\
+      padding: 54px 0 70px 0;\
+      text-align: center;\
+    \}\
+    .final-cta h3\{\
+      margin: 0 0 12px 0;\
+      font-family: "Playfair Display", serif;\
+      font-weight: 500;\
+      letter-spacing: 0.03em;\
+      font-size: 28px;\
+    \}\
+    .final-cta p\{\
+      margin: 0 0 18px 0;\
+      color: var(--muted);\
+      font-size: 14px;\
+    \}\
+\
+    /* Footer */\
+    footer\{\
+      border-top: 1px solid var(--line);\
+      padding: 18px 0 26px 0;\
+      color: var(--muted);\
+      font-size: 13px;\
+    \}\
+    .foot\{\
+      display:flex;\
+      justify-content: space-between;\
+      gap: 12px;\
+      flex-wrap: wrap;\
+      align-items: center;\
+    \}\
+    .foot a\{ color: var(--muted); \}\
+    .foot a:hover\{ color: var(--ink); \}\
+  </style>\
+</head>\
+\
+<body>\
+\
+<header>\
+  <div class="container">\
+    <div class="nav">\
+      <a class="brand" href="index.html" aria-label="MOODA home">MOODA</a>\
+\
+      <nav class="navlinks" aria-label="Primary navigation">\
+        <a href="upload.html">Closet</a>\
+        <a href="#demo">Looks</a>\
+        <a href="#about">About</a>\
+        <a href="#signin">Sign in</a>\
+      </nav>\
+\
+      <a class="cta" href="#demo">Start</a>\
+    </div>\
+  </div>\
+</header>\
+\
+<main id="top">\
+  <!-- HERO -->\
+  <section class="hero" aria-label="Hero section">\
+    <div class="container hero-inner">\
+      <div>\
+        <h1>MOODA</h1>\
+        <h2>Dress by how you feel.</h2>\
+        <p>Upload what you own. Choose a mood. Get a look\'97instantly.</p>\
+\
+        <div class="hero-actions">\
+          <a class="cta" href="#demo">Start Styling</a>\
+          <a class="cta-ghost" href="#how">See how it works</a>\
+        </div>\
+      </div>\
+\
+      <aside class="hero-card" aria-label="Quick preview card">\
+        <div class="small">Today\'92s styling</div>\
+        <div class="row"><span>Mood</span><span class="pill" id="heroMoodPill">Clean</span></div>\
+        <div class="row"><span>Outfit</span><span class="pill">Look 01</span></div>\
+        <div class="row"><span>Time</span><span class="pill">Under 1 minute</span></div>\
+      </aside>\
+    </div>\
+  </section>\
+\
+  <!-- HOW IT WORKS -->\
+  <section id="how">\
+    <div class="container">\
+      <div class="section-title">\
+        <h3>How it works</h3>\
+        <p>Styled from what you already own\'97no shopping required.</p>\
+      </div>\
+\
+      <div class="grid-3">\
+        <div class="card">\
+          <div class="kicker">Step 01</div>\
+          <h4>Upload your closet</h4>\
+          <p>Add tops, bottoms, shoes, outerwear. MOODA remembers everything for you.</p>\
+        </div>\
+        <div class="card">\
+          <div class="kicker">Step 02</div>\
+          <h4>Pick your mood</h4>\
+          <p>Clean, confident, relaxed, sharp\'97whatever today needs.</p>\
+        </div>\
+        <div class="card">\
+          <div class="kicker">Step 03</div>\
+          <h4>Get matched looks</h4>\
+          <p>A complete outfit, plus alternatives you can remix in seconds.</p>\
+        </div>\
+      </div>\
+    </div>\
+  </section>\
+\
+  <!-- DEMO -->\
+  <section id="demo" aria-label="Demo section">\
+    <div class="container">\
+      <div class="section-title">\
+        <h3>Try a mood</h3>\
+        <p>Tap a mood to preview a look. Keep it simple\'97let the wardrobe do the work.</p>\
+      </div>\
+\
+      <div class="demo">\
+        <div class="demo-left">\
+          <div class="kicker">Mood selector</div>\
+          <h4 style="margin:0 0 6px 0; font-size:16px; font-weight:600;">How do you feel today?</h4>\
+          <p style="margin:0; color:var(--muted); font-size:14px; line-height:1.6;">\
+            Choose one. MOODA will match a look that fits the day.\
+          </p>\
+\
+          <div class="chips" role="group" aria-label="Mood options">\
+            <button class="chip" data-mood="Clean" aria-pressed="true">Clean</button>\
+            <button class="chip" data-mood="Confident" aria-pressed="false">Confident</button>\
+            <button class="chip" data-mood="Relaxed" aria-pressed="false">Relaxed</button>\
+            <button class="chip" data-mood="Sharp" aria-pressed="false">Sharp</button>\
+            <button class="chip" data-mood="Effortless" aria-pressed="false">Effortless</button>\
+          </div>\
+\
+          <div style="margin-top:16px; color:var(--muted); font-size:13px;">\
+            Tip: In a real product, this is where you\'92d pick \'93Work / Casual / Night\'94 too.\
+          </div>\
+        </div>\
+\
+        <div class="demo-right" aria-label="Look preview">\
+          <div class="preview-top">\
+            <div class="look-title">\
+              <strong id="lookLabel">Look 01</strong>\
+              <span><span id="moodLabel">Clean</span> \'95 matched from your closet</span>\
+            </div>\
+            <span class="pill" id="whyPill">Neutral contrast</span>\
+          </div>\
+\
+          <div class="preview-body">\
+            <div class="outfit-box">\
+              <div class="label">Main outfit</div>\
+              <ul id="mainList">\
+                <li>White tee (structured)</li>\
+                <li>Black straight trousers</li>\
+                <li>White sneakers</li>\
+                <li>Black minimalist watch</li>\
+              </ul>\
+              <div class="note" id="mainNote">Balanced silhouette, clean lines, easy for work or class.</div>\
+            </div>\
+\
+            <div class="outfit-box">\
+              <div class="label">Alternative</div>\
+              <ul id="altList">\
+                <li>Black knit top</li>\
+                <li>Grey tailored pants</li>\
+                <li>Black loafers</li>\
+                <li>Simple tote</li>\
+              </ul>\
+              <div class="note" id="altNote">Slightly sharper\'97still effortless.</div>\
+            </div>\
+          </div>\
+\
+          <div class="preview-actions">\
+            <a class="btn btn-primary" href="upload.html">Build my closet</a>\
+            <button class="btn" type="button">Remix</button>\
+            <button class="btn" type="button">Save look</button>\
+          </div>\
+        </div>\
+      </div>\
+    </div>\
+  </section>\
+\
+  <!-- PROOF -->\
+  <section id="about" aria-label="Proof section">\
+    <div class="container">\
+      <div class="section-title">\
+        <h3>Made for real wardrobes</h3>\
+        <p>MOODA is built for daily decisions\'97quiet, fast, and consistent.</p>\
+      </div>\
+\
+      <div class="proof">\
+        <div class="bullets">\
+          <ul>\
+            <li>No shopping required. Styled from what you already own.</li>\
+            <li>Minimal effort. Maximum clarity.</li>\
+            <li>Unisex by design. Timeless by default.</li>\
+          </ul>\
+        </div>\
+        <div class="quote">\
+          <strong>\'93It feels like a stylist who doesn\'92t talk too much.\'94</strong><br/>\
+          Quiet rules, clean choices, and looks you\'92ll actually wear.\
+        </div>\
+      </div>\
+    </div>\
+  </section>\
+\
+  <!-- FINAL CTA -->\
+  <div class="final-cta" id="closet">\
+    <div class="container">\
+      <h3>Ready for today\'92s look?</h3>\
+      <p>Takes less than a minute to begin.</p>\
+      <a class="cta" href="upload.html">Start with Upload</a>\
+    </div>\
+  </div>\
+</main>\
+\
+<footer>\
+  <div class="container">\
+    <div class="foot">\
+      <div>\'a9 <span id="year"></span> MOODA</div>\
+      <div style="display:flex; gap:14px;">\
+        <a href="#privacy">Privacy</a>\
+        <a href="#terms">Terms</a>\
+        <a href="#contact">Contact</a>\
+      </div>\
+    </div>\
+  </div>\
+</footer>\
+\
+<script>\
+  const moodData = \{\
+    "Clean": \{\
+      why: "Neutral contrast",\
+      main: [\
+        "White tee (structured)",\
+        "Black straight trousers",\
+        "White sneakers",\
+        "Black minimalist watch"\
+      ],\
+      mainNote: "Balanced silhouette, clean lines, easy for work or class.",\
+      alt: [\
+        "Black knit top",\
+        "Grey tailored pants",\
+        "Black loafers",\
+        "Simple tote"\
+      ],\
+      altNote: "Slightly sharper\'97still effortless."\
+    \},\
+    "Confident": \{\
+      why: "Strong silhouette",\
+      main: [\
+        "Black blazer",\
+        "White shirt",\
+        "Black wide-leg pants",\
+        "Chelsea boots"\
+      ],\
+      mainNote: "Sharp structure, grounded palette\'97confident without trying.",\
+      alt: [\
+        "Black turtleneck",\
+        "Black denim (straight)",\
+        "Leather sneakers",\
+        "Sleek belt"\
+      ],\
+      altNote: "Bold but simple\'97clean confidence."\
+    \},\
+    "Relaxed": \{\
+      why: "Soft structure",\
+      main: [\
+        "Grey sweatshirt",\
+        "Black relaxed pants",\
+        "White low-top sneakers",\
+        "Cap (optional)"\
+      ],\
+      mainNote: "Comfort first, still tidy\'97ready for an easy day.",\
+      alt: [\
+        "White long-sleeve tee",\
+        "Black shorts / relaxed chinos",\
+        "Slip-on sneakers",\
+        "Light tote"\
+      ],\
+      altNote: "Low effort, still intentional."\
+    \},\
+    "Sharp": \{\
+      why: "Tailored lines",\
+      main: [\
+        "Black coat / trench",\
+        "Monochrome top",\
+        "Tailored trousers",\
+        "Black loafers"\
+      ],\
+      mainNote: "Crisp lines, minimal detail\'97editorial sharp.",\
+      alt: [\
+        "White shirt",\
+        "Black pleated pants",\
+        "Derby shoes",\
+        "Slim bag"\
+      ],\
+      altNote: "Classic contrast, elevated."\
+    \},\
+    "Effortless": \{\
+      why: "Easy balance",\
+      main: [\
+        "Black tee",\
+        "Grey straight jeans",\
+        "White sneakers",\
+        "Minimal chain (optional)"\
+      ],\
+      mainNote: "Everyday staples, perfectly balanced\'97no overthinking.",\
+      alt: [\
+        "White tee",\
+        "Black denim",\
+        "Low-profile sneakers",\
+        "Soft overshirt"\
+      ],\
+      altNote: "Relaxed layer, still clean."\
+    \}\
+  \};\
+\
+  const chips = Array.from(document.querySelectorAll(".chip"));\
+  const moodLabel = document.getElementById("moodLabel");\
+  const heroMoodPill = document.getElementById("heroMoodPill");\
+  const whyPill = document.getElementById("whyPill");\
+  const mainList = document.getElementById("mainList");\
+  const altList = document.getElementById("altList");\
+  const mainNote = document.getElementById("mainNote");\
+  const altNote = document.getElementById("altNote");\
+\
+  function setMood(mood)\{\
+    const data = moodData[mood];\
+    if(!data) return;\
+\
+    moodLabel.textContent = mood;\
+    heroMoodPill.textContent = mood;\
+    whyPill.textContent = data.why;\
+\
+    mainList.innerHTML = data.main.map(x => `<li>$\{x\}</li>`).join("");\
+    altList.innerHTML = data.alt.map(x => `<li>$\{x\}</li>`).join("");\
+\
+    mainNote.textContent = data.mainNote;\
+    altNote.textContent = data.altNote;\
+\
+    chips.forEach(btn => \{\
+      const pressed = btn.dataset.mood === mood;\
+      btn.setAttribute("aria-pressed", pressed ? "true" : "false");\
+    \});\
+  \}\
+\
+  chips.forEach(btn => btn.addEventListener("click", () => setMood(btn.dataset.mood)));\
+  document.getElementById("year").textContent = new Date().getFullYear();\
+</script>\
+\
+</body>\
+</html>\
+}
